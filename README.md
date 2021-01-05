@@ -1,2 +1,3 @@
-# Calculator
-A simple calculator built using HTML, CSS, and Javascript. For tutorial --> https://thecodingpie.com/post/how-to-build-a-simple-calculator-using-javascript-html-and-css/
+Simple HTML, CSS, JavaScript calculator. This is a modification of an existing code base.
+
+* Hamburger menu displays 'Crashed..' in the display when clicked.
