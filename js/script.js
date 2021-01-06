@@ -36,10 +36,7 @@ function calculate(event) {
     // otherwise concatenate it to the display
     display.value += clickedButtonValue;
   }
-
-  if (display.value.length >= 8) {
-    document.getElementById('display').style.fontSize="2rem";
-  }
+  checkDisplayFontSize();
 }
 
 // Get the hamburger menu link icon
@@ -50,3 +47,21 @@ function menuMessage() {
     display.value = 'Crashed..';
   }
 
+// Check font size of the display and scale if necessary
+function checkDisplayFontSize() {
+  // Reduce display font to 2rem if 8 digits are entered and showing in the display
+  if (display.value.length >= 8) {
+    document.getElementById('display').style.fontSize="2rem";
+
+    // Reduce display font to 1rem if 15 digits are entered and showing in the display
+    if(display.value.length >= 15) {
+      document.getElementById('display').style.fontSize="1rem";
+
+      // Return font size to 4rem and display 0 if 30 digits are entered and showing in the display(default state)
+      if (display.value.length >= 30) {
+        document.getElementById('display').style.fontSize="4rem";
+        display.value = 0;
+      }
+    }
+  }
+}
