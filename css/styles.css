@@ -20,7 +20,7 @@ body {
   width: 300px;
   padding-bottom: 15px;
   border-radius: 7px;
-  background-color: #2E398A; /* Keys section background */
+  background-color: #2e398a; /* Keys section background */
   box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
 }
 
@@ -40,13 +40,23 @@ body {
   
 }
 
-.top-nav a {
-  color: white;
-}
-
+/* Hamburger menu */
 .top-nav a.icon {
   display: block;
   position: absolute;
+}
+
+/* All links in the top nav */
+.top-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+#myLinks {
+  display: none;
+  float: right;
+  font-size: 15px;
+  position: relative;
 }
 
 /* display */
@@ -133,4 +143,9 @@ button:hover {
 .operator {
   background-color: #FADB4B;
   color: #000;
+}
+
+/* Dark Theme */
+.dark-mode {
+  background-color: black;
 }
